@@ -48,12 +48,3 @@ variable "ip_subnet_ext_nonprod" {
   default = ""
 }
 
-# Opsview IP Address:
-variable "opsview_ip" {
-  default = ""
-}
-
-# Prod MGMT:
-variable "ip_prod_mgmt" {
-  default = ""
-}
