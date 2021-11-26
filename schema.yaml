@@ -7,16 +7,20 @@ locale: "en"
 
 variableGroups:
 - title: "General Configuration"
-  visible: true
+  visible: false
   variables:
   - tenancy_ocid
+  - user_ocid
+  - fingerprint
+  - private_key_path
   - region
-  - customer_label
+  
 
 - title: "Required Configuration"
   visible: true  
   variables:
   - compartment_ocid
+  - customer_label
   - show_advanced 
 
 - title: "Networking  Configuration"
@@ -33,6 +37,18 @@ variableGroups:
   - ip_subnet_dmz_prod
   - ip_subnet_dmz_nonprod
   - ip_subnet_ext_nonprod
+
+- title: "Tags"
+  visible: 
+      and:
+        - show_advanced
+  variables:
+  - StackName
+  - StackOwner
+  - ProjectName
+  - BillingOwner
+  - CostCenter
+  - Workload
 
 variables:
 
@@ -148,6 +164,51 @@ variables:
     pattern: "^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]).(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]).(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]).(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\/(3[0-2]|[1-2]?[0-9])$"
     title: "Subnet IP- Nonprod External"
     description: "Choose single, contiguous IPv4 CIDR block for the Subnet"
+
+  #Tags
+
+  StackName:
+    type: string
+    required: false
+    default: " "
+    title: "Stackname"
+    description: "Tags"
+
+  StackOwner:
+    type: string
+    required: false
+    default: " "
+    title: "Stackowner"
+    description: "Tags"
+
+  ProjectName:
+    type: string
+    required: false
+    default: " "
+    title: "ProjectName"
+    description: "Tags"
+
+  BillingOwner:
+    type: string
+    required: false
+    default: " "
+    title: "BillingOwner"
+    description: "Tags"
+
+  CostCenter:
+    type: string
+    required: false
+    default: " "
+    title: "CostCenter"
+    description: "Tags"
+
+  WorkLoad:
+    type: string
+    required: false
+    default: " "
+    title: "WorkLoad"
+    description: "Tags"
+
 
 outputs:
 
