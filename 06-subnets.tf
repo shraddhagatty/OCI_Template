@@ -2,7 +2,6 @@
 # Subnets:
 ############################################################################
 # Production Red Tier:
-/*
 module "subnet_ext_prod" {
   source              = "./modules/subnet"
   subnet_display_name = "Prod External Subnet"
@@ -161,4 +160,3 @@ output "subnet_db_nonprod_id" {
 }
 
 ############################################################################
-*/

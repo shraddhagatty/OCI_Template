@@ -47,8 +47,9 @@ variableGroups:
   - StackOwner
   - ProjectName
   - BillingOwner
-  - CostCenter
   - Workload
+  - CostCenter
+  
 
 variables:
 
@@ -194,21 +195,19 @@ variables:
     title: "BillingOwner"
     description: "Tags"
 
-  WorkLoad:
+  Workload:
     type: string
     required: false
     default: " "
     title: "WorkLoad"
     description: "Tags"
-    
+
   CostCenter:
     type: string
     required: false
     default: " "
     title: "CostCenter"
     description: "Tags"
-
-  
 
 
 outputs:
