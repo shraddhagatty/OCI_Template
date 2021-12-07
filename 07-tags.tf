@@ -27,24 +27,24 @@ locals {
 
   tags_common = {
     "Account.CompartmentName" = "common_services"
-    "Account.StackName"       = var.StackName
-    "Account.StackOwner"      = var.StackOwner
-    "Account.ProjectName"     = var.ProjectName
-    "Account.BillingOwner"    = var.BillingOwner
-    "Billing.CostCentre"      = var.CostCenter
-    "Billing.Workload"        = var.Workload
+    "Account.StackName"       = var.tags["StackName"]
+    "Account.StackOwner"      = var.tags["StackOwner"]
+    "Account.ProjectName"     = var.tags["ProjectName"]
+    "Account.BillingOwner"    = var.tags["BillingOwner"]
+    "Billing.CostCentre"      = var.tags["CostCenter"]
+    "Billing.Workload"        = var.tags["Workload"]
     "Billing.Environment"     = "Common"
   }
 
   tags_prd = {
 
     "Account.CompartmentName" = "production_services"
-    "Account.StackName"       = var.StackName
-    "Account.StackOwner"      = var.StackOwner
-    "Account.ProjectName"     = var.ProjectName
-    "Account.BillingOwner"    = var.BillingOwner
-    "Billing.CostCentre"      = var.CostCenter
-    "Billing.Workload"        = var.Workload
+    "Account.StackName"       = var.tags["StackName"]
+    "Account.StackOwner"      = var.tags["StackOwner"]
+    "Account.ProjectName"     = var.tags["ProjectName"]
+    "Account.BillingOwner"    = var.tags["BillingOwner"]
+    "Billing.CostCentre"      = var.tags["CostCenter"]
+    "Billing.Workload"        = var.tags["Workload"]
     "Billing.Environment"     = "Production"
 
   }
@@ -52,12 +52,12 @@ locals {
   tags_nprd = {
 
     "Account.CompartmentName" = "nonproduction_services"
-    "Account.StackName"       = var.StackName
-    "Account.StackOwner"      = var.StackOwner
-    "Account.ProjectName"     = var.ProjectName
-    "Account.BillingOwner"    = var.BillingOwner
-    "Billing.CostCentre"      = var.CostCenter
-    "Billing.Workload"        = var.Workload
+    "Account.StackName"       = var.tags["StackName"]
+    "Account.StackOwner"      = var.tags["StackOwner"]
+    "Account.ProjectName"     = var.tags["ProjectName"]
+    "Account.BillingOwner"    = var.tags["BillingOwner"]
+    "Billing.CostCentre"      = var.tags["CostCenter"]
+    "Billing.Workload"        = var.tags["Workload"]
     "Billing.Environment"     = "NonProduction"
 
   }

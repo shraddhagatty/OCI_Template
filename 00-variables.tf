@@ -12,6 +12,22 @@ variable "private_key_path" {}
 
 
 ##Label used as a prefix for naming resources
+
+variable "tags" {
+
+    default = {
+        "customer_label" = ""
+        "StackName" = ""
+        "StackOwner" = ""
+        "ProjectName" = ""
+        "BillingOwner" = ""
+        "CostCenter" = ""
+        "Workload" = ""
+
+    }
+  
+}
+/*
 variable customer_label{
     default = ""
 }
@@ -35,3 +51,4 @@ variable "CostCenter" {
 variable "Workload" {
     default = ""
 }
+*/

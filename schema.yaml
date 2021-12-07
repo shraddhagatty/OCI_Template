@@ -43,12 +43,12 @@ variableGroups:
       and:
         - show_advanced
   variables:
-  - StackName
-  - StackOwner
-  - ProjectName
-  - BillingOwner
-  - Workload
-  - CostCenter
+  - tags["StackName"]
+  - tags["StackOwner"]
+  - tags["ProjectName"]
+  - tags["BillingOwner"]
+  - tags["CostCenter"]
+  - tags["Workload"]
   
 
 variables:
@@ -167,42 +167,42 @@ variables:
 
   #Tags
 
-  StackName:
+  tags["StackName"]:
     type: string
     required: false
     default: " "
     title: "Stackname"
     description: "Tags"
 
-  StackOwner:
+  tags["StackOwner"]:
     type: string
     required: false
     default: " "
     title: "Stackowner"
     description: "Tags"
 
-  ProjectName:
+  tags["ProjectName"]:
     type: string
     required: false
     default: " "
     title: "ProjectName"
     description: "Tags"
 
-  BillingOwner:
+  tags["BillingOwner"]:
     type: string
     required: false
     default: " "
     title: "BillingOwner"
     description: "Tags"
 
-  Workload:
+  tags["Workload"]:
     type: string
     required: false
     default: " "
     title: "WorkLoad"
     description: "Tags"
 
-  CostCenter:
+  tags["CostCenter"]:
     type: string
     required: false
     default: " "
@@ -223,3 +223,9 @@ outputs:
     displayText: " Public IP"
     type: copyableString
     visible: true
+
+
+
+
+    
+    
