@@ -27,11 +27,11 @@ variable "tags" {
     }
   
 }
-/*
+
 variable customer_label{
     default = ""
 }
-
+/*
 #Tags Name
 variable "StackName" {
     default = ""
